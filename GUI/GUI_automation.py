@@ -102,9 +102,6 @@ class Ui_MainWindow(object):
     def formatChecker(self,path):
         excel_file = pd.read_csv(path)
         if len(excel_file.columns)!=4: return False
-        if 
-
-
         return True
         
         
@@ -112,7 +109,7 @@ class Ui_MainWindow(object):
         path = self.filename[0]
         self.window_1 = QtWidgets.QMainWindow()
         self.dashboard = dashboard_MainWindow()
-        self.dashboard.setupUi(self.window_1)
+        self.dashboard.setupUi(self.window_1,path)
         self.window_1.show()
         
     
